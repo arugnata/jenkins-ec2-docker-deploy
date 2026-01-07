@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jenkins Docker Deployment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Jenkins Pipeline Success!</h1>
+            <p class="subtitle">Deployed with Docker on AWS EC2</p>
+        </header>
+        
+        <div class="content">
+            <div class="card">
+                <h2>✅ Deployment Details</h2>
+                <ul>
+                    <li><strong>Server:</strong> AWS EC2 Instance</li>
+                    <li><strong>Container:</strong> Docker Nginx</li>
+                    <li><strong>Status:</strong> Running</li>
+                    <li><strong>Port:</strong> 80</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h2>🔧 Pipeline Stages</h2>
+                <ol>
+                    <li>GitHub Code Checkout</li>
+                    <li>Docker Image Build</li>
+                    <li>Push to Docker Hub</li>
+                    <li>Deploy to EC2</li>
+                </ol>
+            </div>
+            
+            <div class="card">
+                <h2>📊 System Info</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span class="label">Instance IP:</span>
+                        <span class="value">44.214.137.185</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Container:</span>
+                        <span class="value">nginx-site</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Image:</span>
+                        <span class="value">arugnata/nginx-site</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Automated deployment via Jenkins Pipeline | Built with Docker & AWS</p>
+            <p class="timestamp" id="timestamp"></p>
+        </footer>
+    </div>
+    
+    <script>
+        // Add current timestamp
+        document.getElementById('timestamp').textContent = 
+            'Deployed: ' + new Date().toLocaleString();
+    </script>
+</body>
+</html>
